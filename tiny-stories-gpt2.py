@@ -46,8 +46,8 @@ print("Loading the data...")
 dataset = load_dataset("roneneldan/TinyStories")
 
 # Optional: take a small subset for quick experiments.
-# dataset["train"] = dataset["train"].select(range(1_000))
-# dataset["validation"] = dataset["validation"].select(range(1_000))
+dataset["train"] = dataset["train"].select(range(1_000))
+dataset["validation"] = dataset["validation"].select(range(1_000))
 
 # Tokenize the data.
 print("Tokenizing...")
