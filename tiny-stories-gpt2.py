@@ -29,10 +29,10 @@ print(f"Vocabulary size: {len(tokenizer)}")
 config = GPT2Config(
     vocab_size=len(tokenizer), # The size of the GPT-2 tokenizer vocabulary.
     n_positions= 256,              # Shorter context => faster training (TinyStories stories are short).
-    n_embd= 128,                   # The embedding dimension.  Smaller => faster training.
-    n_layer= 6,                  # The number of attention layers .
+    n_embd= 64,                   # The embedding dimension.  Smaller => faster training.
+    n_layer= 8,                  # The number of attention layers .
     n_head= 4,                   # The number of attention heads per layer.
-    n_inner= 512,                  # Inside each layer is a feedforward network:
+    n_inner= 256,                  # Inside each layer is a feedforward network:
                                #   1. The first we map from n_embd to n_inner dimensions
                                #   2. Then we apply the GELU activation function.
                                #   2. Finally we map back from n_inner to n_embd dimensions.
